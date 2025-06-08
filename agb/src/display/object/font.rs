@@ -4,13 +4,14 @@ use agb_fixnum::{Num, Vector2D};
 use alloc::{collections::VecDeque, vec::Vec};
 
 use crate::display::Font;
+use crate::display::Priority;
 
 use self::{
     preprocess::{Line, Preprocessed, PreprocessedElement},
     renderer::{Configuration, WordRender},
 };
 
-use super::{OamIterator, ObjectUnmanaged, PaletteVram, Size, SpriteVram, Priority};
+use super::{OamIterator, ObjectUnmanaged, PaletteVram, Size, SpriteVram};
 
 mod preprocess;
 mod renderer;
