@@ -436,7 +436,7 @@ impl LayoutCache {
                 .map(|(offset, letter)| {
                     let position = offset.change_base() + position;
                     let mut object = ObjectUnmanaged::new(letter.clone());
-                    object.show().set_position(position).set_priority(Priority::P0);
+                    object.show().set_position(position).set_priority(Priority::P1);
                     object
                 }),
         );
