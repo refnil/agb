@@ -10,7 +10,7 @@ use self::{
     renderer::{Configuration, WordRender},
 };
 
-use super::{OamIterator, ObjectUnmanaged, PaletteVram, Size, SpriteVram};
+use super::{OamIterator, ObjectUnmanaged, PaletteVram, Size, SpriteVram, Priority};
 
 mod preprocess;
 mod renderer;
@@ -435,7 +435,7 @@ impl LayoutCache {
                 .map(|(offset, letter)| {
                     let position = offset.change_base() + position;
                     let mut object = ObjectUnmanaged::new(letter.clone());
-                    object.show().set_position(position);
+                    object.show().set_position(position).set_priority(Priority::P0);
                     object
                 }),
         );
